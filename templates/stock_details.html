@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+
+{% block title %} {{ stock.title }} - Details{% endblock %} 
+
+{% block body %} 
+<h1>{{ stock.title }}</h1> 
+
+<p>
+    {{ stock.overview }}
+</p>
+{% if session.get('user_email') %} 
+<h2>Rate this Stock</h2>
+<form action="/stocks/{{ stock.stock_id }}/ratings" method="POST">
+    <p>
+        Rating:
+        <select name="rating">
+            <opinion value="">Select Rating</opinion>
+            {% for num in range(6) %} 
+                <option value="{{ num }}">{{ num }}</option>
+            {% endfor %}
+        </select>
+    </p>
+    <p><input type="submit"></p>
+</form>
+{% endif %} 
+
+<img src="{{ stock.poster_path">
+{% endblock %}

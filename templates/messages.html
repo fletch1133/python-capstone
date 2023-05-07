@@ -1,0 +1,45 @@
+{% extends 'base.html' %} 
+
+{% block head %} 
+<div class="form-container">
+    <h1>Send Messages</h1>
+    <form class="message_form" action="{{ url_for('messages) }}" method="POST">
+        {{ message_form.hidden_tag() }}
+        {{ message_form.csrf_token() }}
+        {{ message_form.recipient.label }} {{ message_form.recipient }}
+        {{ message_form.message.label }} {{ message_form.message }}
+        {{ message_form.submit }}
+    </form> 
+</div>
+
+{% for message in get_flashed_messages() %} 
+<p>{{ message }}</p>
+{% endfor %} 
+<br>
+{% endblock %}
+
+{% block body %} 
+<h1>My Messages</h1>
+<form method="GET">
+    <label for="sender">Filter by Sender</label>
+    <select name="sender" id="sender">
+
+        {% for sender in senders %} 
+        <option vlaue="{{ sender.id }}">{{ sender.username }}</option>
+        {% endfor %} 
+    </select>
+    <input type="submit" value="Filter">
+</form>
+
+<ul>
+    {% for message in messages %} 
+    <li>
+        <div>
+            <p>From: {{message.sender.username }}</p>
+            <p>Message: {{message.message }}</p>
+            <p>Date/Time: {{ message.date_time }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %} 
