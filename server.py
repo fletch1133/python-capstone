@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request, flash, session, redirect
+from flask import Flask, render_template, request, flash, session, redirect, url_for
 from model import connect_to_db, db
 import crud
+import json
+
 
 from jinja2 import StrictUndefined
 
@@ -14,11 +16,18 @@ def homepage():
 
     return render_template("homepage.html")
 
+#@app.route("/stocks")
+#def all_stocks():
+   # """View all the stocks."""
+
+    #stocks = crud.get_stocks()
+
 @app.route("/stocks")
 def all_stocks():
-    """View all the stocks."""
+    with open('/Users/anthonyfletcher/Ex from specs/Capstone/data/stocks.json') as f:
+        stocks = json.load(f)
+    return render_template("all_stocks.html", stocks=stocks)
 
-    stocks = crud.get_stocks
 
 
 @app.route("/users")
@@ -78,35 +87,50 @@ def process_login():
 def update_rating():
     rating_id = request.json["rating_id"]
     update_score = request.json["update_score"]
-    crud.update_rating(rating_id, updated_score)
+    crud.update_rating(rating_id, update_score)
     db.session.commit()
 
-    return "Success, YAY!"
+    flash(f"You have updated the rating")
+    return render_template("update_rating.html", rating_id=rating_id, update_score=update_score)
 
-@app.route("/stocks/<stock_id>/ratings", methods=["POST"])
-def create_rating(stock_id):
+@app.route("/stocks/<stock_title>/<rating>", methods=["POST"])
+def create_rating(stock_title, rating):
+    print(stock_title, rating)
     """Create a new rating for a stock."""
+    flash(f"You rated {stock_title} as {rating} stock!")
+    return redirect(url_for("stocks"))
 
-    logged_in_email = session.get("user_email")
-    rating_score = request.form.get("rating")
+def messages():
+    messages = []
+    senders = User.query.all()
+    message_form = MessageForm()
+    message_form.recipient.choices = [(user.id, user.username) for user in User.query.all()]
 
-    if logged_in_email is None:
-        flash("You need to be logged in to rate a stock.")
-    elif not rating_score:
-        flash("Error: you did not select a score for your rating.")
+
+    sender_id = request.args.get('sender')
+    if sender_id is not None:
+        messages = crud.get_all_messages(sender_id=int(sender_id))
     else:
-        user = crud.get_user_by_email(logged_in_email)
-        stock = crud.get_stock_by_id(stock_id)
+        messages = crud.get_all_messages()
 
-        rating = crud.create_rating(user, stock, int(rating_score))
-        db.session.add(rating)
+    if message_form.validate_on_submit():
+        sender_id = current_user.id
+        recipient_id = int(message_form.recipient.data)
+        message = message_form.message.data
+        new_message = Message(sender_id=sender_id, recipient_id=recipient_id, message=message)
+        db.session.add(new_message)
         db.session.commit()
+        flash('Message sent!')
 
-        flash(f"You have rated this stock {rating_score} out of 10.")
+    sender_id = request.args.get('sender')
 
-    return redirect(f"/stocks/{stock_id}")
+    if sender_id:
+        messages = crud.get_all_messages(sender_id=int(sender_id), recipient_id=current_user.id)
+    else:
+        messages = crud.get_all_messages(recipient_id=current_user.id)
 
-#@app.route()
+
+    return render_template('messages.html', message_form=message_form, messages=messages, senders=senders)
 
 
 if __name__ == "__main__":

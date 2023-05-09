@@ -1,4 +1,5 @@
-from model import db, User, Account, Favorite, Industry, Rating, Future, Message
+from model import db, User, Account, Favorite, Industry, Rating, Future, Message, Stock
+
 
 
 def create_user(email, password):
@@ -8,20 +9,33 @@ def create_user(email, password):
 
     return user
 
-def get_user():
-    """Return all the users."""
+#def get_user():
+    #"""Return all the users."""
 
+    #return User.query.all()
+
+def get_users():
+    """Return a list of all users."""
     return User.query.all()
+
 
 def get_user_by_id(user_id):
     """Return a user by their primary key."""
 
     return User.query.get(user_id)
 
-def get_user_by_email():
-    """Return a user by their email."""
 
-    return User.query.filter(User.email == email).first()
+def get_user_by_email(email):
+    """Return a user by their email."""
+ 
+    return User.query.filter_by(email=email).first()  
+
+
+#def get_user_by_email(email):
+    #"""Return a user by their email."""
+
+    #db.session.query(User).order_by(User.id)
+    #return User.query.filter_by(User.email == email).first()
 
 def create_account(stocks, returns):
     """Create a new account."""
@@ -63,6 +77,10 @@ def pick_stock():
     """Pick any stock out of the avaiable ones listed."""
 
     return stock
+
+def get_stocks():
+    
+    return db.session.execute(db.select(Stock).order_by(Stock.id))
 
 
 def get_all_messages(sender_id=None, recipient_id=None):

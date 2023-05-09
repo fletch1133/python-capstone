@@ -1,17 +1,34 @@
-{% extends 'base.html' %} 
-{% block title %}All Stocks{% endblock %} 
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <h2>Rate this stock!</h2>
+        <form action="/stocks/{{stock}}/{{rating}}" method="POST">  // why is this trying to call the endpoint before submit is pressed
+            <p>
+                <select>
+                    {% for stock in stocks %} 
+                    <option value="{{stock}}" SELECTED>{{stock.title}}</option>"
+                    {% endfor %}
+                </select>
+            </p>
 
-{% block body %} 
-<h1>All Stocks</h1>
+            <p>
+                Rating it <input value="0.0" type="string">
+                <input type="submit">
+            </p>
+        </form>
+    {% block title %}All Stocks{% endblock %} 
 
-
-<ul>
-    {% for stock in stocks %} 
-    <li>
-        <a href="/stocks/{{ stock.stock_id }}">
-            {{ stock.title }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-{% endblock %}
+    {% block body %} 
+    <h1>All Stocks</h1>
+    <ul>
+        {% for stock in stocks %} 
+        <li>
+            <a href="/stocks/{{stock.title}}">
+                {{ stock.title }} {{stock.purchase_price}}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>

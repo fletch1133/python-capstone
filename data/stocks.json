@@ -3,105 +3,105 @@
         "title": "AAPL",
         "overview": "Apple Inc. (Apple) designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories and sells a range of related services. The Company’s products include iPhone, Mac, iPad, AirPods, Apple TV, Apple Watch, Beats products, HomePod, iPod touch and accessories. The Company operates various platforms, including the App Store, which allows customers to discover and download applications and digital content, such as books, music, video, games and podcasts. Apple offers digital content through subscription-based services, including Apple Arcade, Apple Music, Apple News+, Apple TV+ and Apple Fitness+. Apple also offers a range of other services, such as AppleCare, iCloud, Apple Card and Apple Pay. Apple sells its products and resells third-party products in a range of markets, including directly to consumers, small and mid-sized businesses, and education, enterprise and government customers through its retail and online stores and its direct sales force.",
         "ipo_date": "December 12, 1980",
-        "purchase_price": "125.00",
+        "purchase_price": "$125.00",
         "industry_sector": "Information Technology"
     },
     {
         "title": "UBER",
         "overview": "Uber Technologies, Inc. develops and operates technology applications supporting a variety of offerings on its platform. The Company connects consumers with providers of ride services, merchants, and food delivery services as well as public transportation networks. Its segments include Mobility, Delivery, and Freight. Mobility refers to products that connect consumers with Mobility drivers who provide rides in a variety of vehicles, such as cars, auto rickshaws, motorbikes, minibuses, or taxis. Mobility also includes activity related to its financial partnership’s offerings. Delivery offering allows consumers to search for and discover local restaurants, order meal, and either pick-up at the restaurant or have the meal delivered and, in certain markets, also includes offerings for grocery, alcohol and convenience store delivery as well as other goods. The Freight segment connects carriers with shippers on its platform, gives carriers upfront, and enables to book a shipment.",
         "ipo_date": "May 9, 2019",
-        "purchase_price": "24.73",
+        "purchase_price": "$24.73",
         "industry_sector": "Information Technology"
     },
     {
         "title": "GM",
         "overview": "General Motors Company designs, builds and sells trucks, crossovers, cars and automobile parts and provides software-enabled services and subscriptions worldwide. The Company provides automotive financing services through its General Motors Financial Company, Inc. (GM Financial) segment. GM North America (GMNA) and GM International (GMI) develops, manufactures and/or markets vehicles under the Buick, Cadillac, Chevrolet and GMC brands. The Company's segments include GMNA, GMI, Cruise and GM Financial. Its Cruise segment is engaged in the development and commercialization of autonomous vehicle technology. It offers OnStar and connected services to approximately 21 million connected vehicles globally through subscription-based and complimentary services. It is also developing hydrogen fuel cell applications across transportation and industries, including mobile power generation, class seven/eight truck, locomotive, aerospace and marine applications.",
         "ipo_date": "November 17, 2010",
-        "purchase_price": "33.64",
+        "purchase_price": "$33.64",
         "industry_sector": "Automotive"
     },
     {
         "title": "MS",
         "overview": "Morgan Stanley is a global financial services company. The Company, through its subsidiaries, provides a range of investment banking, securities, wealth management and investment management services. Its segments include Institutional Securities, Wealth Management and Investment Management. Its Institutional Securities segment provides investment banking, sales and trading, and other services to corporations, governments, financial institutions and high net worth clients. Its Wealth Management segment provides financial services and solutions to individual investors and small-to-medium sized businesses and institutions covering: brokerage and investment advisory services; financial and wealth planning services; workplace services, including stock plan administration; residential real estate loans and other lending products; banking; and retirement plan services. Its Investment Management segment provides a range of investment strategies and products to a diverse group of clients.",
         "ipo_date": "March 13, 1986",
-        "purchase_price": "85.02",
+        "purchase_price": "$85.02",
         "industry_sector": "Financials"
     },
     {
         "title": "CVX",
         "overview": "Chevron Corporation manages its investments in subsidiaries and affiliates, and provides administrative, financial, management and technology support to the United States and international subsidiaries that engage in integrated energy and chemicals operations. The Company operates through two business segments: Upstream and Downstream. The Upstream segment consists primarily of exploring for, developing and producing and transporting crude oil and natural gas; processing, liquefaction, transportation and regasification associated with liquefied natural gas; transporting crude oil by international oil export pipelines; transporting, storage and marketing of natural gas, and a gas-to-liquids plant. The Downstream segment consists primarily of refining crude oil into petroleum products; marketing crude oil, refined products and lubricants; manufacturing and marketing renewable fuels; transporting crude oil and refined products, and manufacturing and marketing commodity petrochemicals.",
         "ipo_date": "January 1, 1986",
-        "purchase_price": "179.49",
+        "purchase_price": "$179.49",
         "industry_sector": "Energy"
     },
     {
         "title": "META",
         "overview": "Meta Platforms, Inc. builds technologies that help people connect, find communities, and grow businesses. The Company's products enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, and wearables. The Company operates through two segments: Family of Apps (FoA) and Reality Labs (RL). FoA segment includes Facebook, Instagram, Messenger, WhatsApp, and other services. RL segment includes augmented and VR-related consumer hardware, software, and content. Facebook enables people to connect, share, discover and communicate with each other on mobile devices and personal computers. Instagram is a place where people can express themselves through photos, videos, and private messaging, and connect with and shop from their favorite businesses. Its RL products include Meta Quest virtual reality devices, as well as software and content available through the Meta Quest Store, which enable a range of social experiences.",
         "ipo_date": "May 18, 2012",
-        "purchase_price": "120.34",
+        "purchase_price": "$120.34",
         "industry_sector": "Information Technology"
     },
     {
         "title": "GILD",
         "overview": "Gilead Sciences, Inc. is a biopharmaceutical company. The Company is focused on the discovery, development and commercialization of medicine to prevent and treat diseases, including human immunodeficiency virus (HIV), viral hepatitis and cancer. The Company’s products for HIV/AIDS patients include Biktarvy, Genvoya, Descovy, Odefsey, Truvada, Complera/Eviplera, and Stribild. The Company’s COVID-19 product is Veklury. The Company’s also provides Epclusa, Harvoni, Vemlidy, and Viread products for liver diseases. The products under hematology/oncology/cell therapy include Yescarta, Tecartus, Trodelvy, and Zydelig. The Company’s other products include Letairis (ambrisentan), Ranexa (ranolazine), Cayston, Jyseleca, and AmBisome (amphotericin B liposome for injection). The Company also sells and distributes generic versions of Epclusa and Harvoni in the United States. The Company is also focused on restoring immune balance with agonists targeting immune inhibitory receptors.",
         "ipo_date": "January 22, 1992",
-        "purchase_price": "85.85",
+        "purchase_price": "$85.85",
         "industry_sector": "Health Care"
     },
     {
         "title": "PYPL",
         "overview": "PayPal Holdings, Inc. is a technology platform that enables digital payments and simplifies commerce experiences on behalf of merchants and consumers worldwide. The Company's payment solutions enable its customers to connect, transact, and send and receive payments, whether they are online or in person. It operates a global, two-sided network at scale that connects merchants and consumers with 435 million active accounts across more than 200 markets. Its brands include PayPal, Braintree, Venmo, Xoom, Hyperwallet, PayPal Zettle, PayPal Honey, and Paidy. It enables consumers to exchange funds with merchants using a variety of funding sources, which include a bank account, a PayPal or Venmo account balance, PayPal and Venmo branded credit products, including its installment products, a credit card, a debit card, certain cryptocurrencies, or other stored value products such as gift cards, and eligible rewards. It also offers consumers person-to-person (P2P) payment solutions.",
         "ipo_date": "July 20, 2015",
-        "purchase_price": "71.22",
+        "purchase_price": "$71.22",
         "industry_sector": "Consumer Discretionary"
     },
     {
         "title": "AMZN",
         "overview": "Amazon.com, Inc. provides a range of products and services to customers. The products offered through its stores include merchandise and content that it purchased for resale and products offered by third-party sellers. It manufactures and sells electronic devices, including Kindle, Fire tablet, Fire TV, Echo, and Ring, and it develops and produces media content. It also offers subscription services such as Amazon Prime, a membership program. Its segments include North America, International and Amazon Web Services (AWS). The AWS segment consists of global sales of compute, storage, database, and other services for start-ups, enterprises, government agencies, and academic institutions. It provides advertising services to sellers, vendors, publishers, authors, and others, through programs, such as sponsored advertisements, display, and video advertising. Customers access its offerings through websites, mobile applications, Alexa, devices, streaming, and physically visiting its stores.",
         "ipo_date": "May 15, 1997",
-        "purchase_price": "84.00",
+        "purchase_price": "$84.00",
         "industry_sector": "Consumer Discretionary"
     },
     {
         "title": "RJF",
         "overview": "Raymond James Financial, Inc. is a diversified financial services company. The Company offers various financial services activities, including investment management services; merger and acquisition and advisory services; underwriting; trading and brokerage of equity and debt securities, and others. The Company operate through five segments: Private Client Group (PCG), Capital Markets, Asset Management, Bank, and Other. The PCG segment provides financial planning, investment advisory and securities transaction services. Its Capital Markets segment conducts investment banking, institutional sales, securities trading, equity research, and the syndication and management of investments in low-income housing funds. Its Asset Management segment provides asset management, portfolio management, and related administrative services to retail and institutional clients. Its Bank segment provides various types of loans, including corporate loans, residential mortgage loans, and tax-exempt loans.",
         "ipo_date": "July 1, 1983",
-        "purchase_price": "106.85",
+        "purchase_price": "$106.85",
         "industry_sector": "Financials"
     },
     {
         "title": "BNTX",
         "overview": "BioNTech SE is a Germany-based clinical-stage biotechnology company. The Company focuses on patient-specific immunotherapies for the treatment of cancer and other serious diseases. The Company is providing technologies including mRNA-based therapies, cell therapies, small molecules and antibodies, which can be utilized for specific purposes or can be even combined with each other in a synergistic manner. It also develops a broad product pipeline using different scientific approaches and technology platforms, including individualized mRNA-based product candidates, chimeric antigen receptor T-cells, checkpoint immunomodulators, targeted cancer antibodies and small molecules. In addition, the Company offers diagnostic products and drug discovery services for other therapeutic areas, including infectious diseases, allergies and autoimmune disorders.",
         "ipo_date": "October 10, 2019",
-        "purchase_price": "150.22",
+        "purchase_price": "$150.22",
         "industry_sector": "Health Care"
     },
     {
         "title": "GS",
         "overview": "The Goldman Sachs Group, Inc. is a global financial institution that delivers a range of financial services across investment banking, securities, investment management and consumer banking to a diversified client base that includes corporations, financial institutions, governments and individuals. The Company segments include Global Banking & Markets, Asset & Wealth Management and Platform Solutions. The Global Banking & Markets segment includes financing, advisory services, risk distribution, and hedging for its institutional and corporate clients, including Fixed Income, Currency and Commodities (FICC) and Equities, Investment Banking and Marquee. The Asset & Wealth Management segment includes advice, investing, and execution for institutions and individuals across public and private markets. The Platform Solutions segment includes consumer platforms, such as partnerships offering credit cards and point-of-sale financing, and transaction banking and other platform businesses.",
         "ipo_date": "May 4, 1999",
-        "purchase_price": "343.38",
+        "purchase_price": "$343.38",
         "industry_sector": "Financials"
     },
     {
         "title": "JPM",
         "overview": "JPMorgan Chase & Co. is a financial holding company. It has four segments: Consumer & Community Banking (CCB), Corporate & Investment Bank (CIB), Commercial Banking (CB), and Asset & Wealth Management (AWM). CCB segment offers products and services to consumers and small businesses through bank branches; ATMs; digital, including mobile and online; and telephone banking. CIB segment consists of banking and markets and securities services, offers a suite of investment banking, market-making, prime brokerage, lending, and treasury and securities products and services to a global client base of corporations, investors, financial institutions, merchants, government and municipal entities. CB segment provides financial solutions, including lending, payments, investment banking and asset management products across three primary client segments: middle market banking, corporate client banking and commercial real estate banking. AWM segment is engaged in investment and wealth management.",
         "ipo_date": "Febuary 1, 1998",
-        "purchase_price": "134.10",
+        "purchase_price": "$134.10",
         "industry_sector": "Financials"
     },
     {
         "title": "JNJ",
         "overview": "Johnson & Johnson is a diversified healthcare products company. The Company is engaged in the research and development, manufacture and sale of a range of products in the healthcare field. It operates through three segments: Consumer Health, Pharmaceutical and MedTech. Its primary focus is products related to human health and well-being. The Consumer Health segment includes a range of products that is focused on personal healthcare used in the skin health/beauty, over-the-counter medicines, baby care, oral care, women’s health and wound care markets. The Pharmaceutical segment is focused on six therapeutic areas: Immunology, Infectious Diseases, Neuroscience, Oncology, Cardiovascular and Metabolism and Pulmonary Hypertension. The MedTech segment includes a range of products used in the interventional solutions, orthopaedics, surgery, and vision fields. Its geographic area includes the United States, Europe, Western Hemisphere (excluding the United States), and Africa, Asia and Pacific.",
         "ipo_date": "September 24, 1944",
-        "purchase_price": "176.65",
+        "purchase_price": "$176.65",
         "industry_sector": "Health Care"
     },
     {
         "title": "DIS",
         "overview": "The Walt Disney Company is a worldwide entertainment company. The Company’s segments include Disney Media and Entertainment Distribution (DMED), and Disney Parks, Experiences and Products (DPEP). The DMED segment encompasses the Company’s global film and episodic television content production and distribution activities. The Company’s DMED’s lines of business consists of Linear Networks, Direct-to-Consumer and Content Sales/Licensing. The Company’s DPEP segment business consists of sale of admissions to theme parks, the sale of food, beverage and merchandise at its theme parks and resorts, sales of cruise vacations, sales and rentals of vacation club properties, royalties from licensing its intellectual properties (IP) for use on consumer goods and the sale of branded merchandise. The Company's Content Sales/Licensing business consist of selling film and episodic television content in the television and subscription video-on-demand (TV/SVOD) and home entertainment markets.",
         "ipo_date": "November 12, 1957",
-        "purchase_price": "86.88",
+        "purchase_price": "$86.88",
         "industry_sector": "Consumer Discretionary"
     }
 ]
