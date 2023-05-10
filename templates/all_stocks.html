@@ -2,17 +2,18 @@
 <html lang="en">
     <body>
         <h2>Rate this stock!</h2>
-        <form action="/stocks/{{stock}}/{{rating}}" method="POST">  // why is this trying to call the endpoint before submit is pressed
+        <form action="/stocks" method="POST"> <!-- // why is this trying to call the endpoint before submit is pressed -->
             <p>
-                <select>
+                <select name="stock-selector" id = "stock-selector">
                     {% for stock in stocks %} 
-                    <option value="{{stock}}" SELECTED>{{stock.title}}</option>"
+                    <option value="{{stock.id}}" SELECTED>{{stock.title}}</option>"
+                    <!-- <form action="/{{stock}}/{{rating}}" method="POST">  -->
                     {% endfor %}
                 </select>
             </p>
 
             <p>
-                Rating it <input value="0.0" type="string">
+                Rating it <input name="values-selector" value="0.0" type="string">
                 <input type="submit">
             </p>
         </form>

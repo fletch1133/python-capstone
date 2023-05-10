@@ -83,6 +83,26 @@ def process_login():
 
     return redirect("/")
 
+# @app.route("/stocks/<stock_title>/<rating>", methods=["POST"])
+# def create_rating(stock_title, rating):
+#     print(stock_title, rating)
+#     print(request.form)
+#     """Create a new rating for a stock."""
+#     flash(f"You rated {stock_title} as {rating} stock!")
+#     return redirect(url_for("stocks"))
+
+
+@app.route("/stocks", methods=["POST"])
+def create_rating():
+    """Create a new rating for a stock."""
+    user = crud.get_user_by_email(session['user_email'])
+    if(user is None):
+        user = crud.get_user_by_id(1)
+    crud.create_rating(stock_id=request.form.get("stock-selector"), user_id=user.id, score=request.form.get("values-selector"))
+    #flash(f"You rated {request.form.get("stock-selector")} as {rating} stock!")
+    return redirect(url_for("all_stocks"))
+
+
 @app.route("/update_rating", methods=["POST"])
 def update_rating():
     rating_id = request.json["rating_id"]
@@ -91,16 +111,11 @@ def update_rating():
     db.session.commit()
 
     flash(f"You have updated the rating")
-    return render_template("update_rating.html", rating_id=rating_id, update_score=update_score)
+    return render_template("all_stocks.html", rating_id=rating_id, update_score=update_score)
 
-@app.route("/stocks/<stock_title>/<rating>", methods=["POST"])
-def create_rating(stock_title, rating):
-    print(stock_title, rating)
-    """Create a new rating for a stock."""
-    flash(f"You rated {stock_title} as {rating} stock!")
-    return redirect(url_for("stocks"))
 
-def messages():
+@app.route("/")
+def messages(MessageForm):
     messages = []
     senders = User.query.all()
     message_form = MessageForm()

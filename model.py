@@ -5,15 +5,40 @@ from datetime import datetime
 db = SQLAlchemy()
 
 
+# class Stock(db.Model):
+#     __tablename__ = "stocks"
+
+#     id = db.Column(db.Integer, primary_key=True, autoincrement= True)
+#     symbol = db.Column(db.String(16), unique = True)
+#     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+
+#     def __repr__(self):
+#         return f"<Stock id={self.id} symbol={self.symbol} user_id={self.user_id}>"
+
+
+
 class Stock(db.Model):
     __tablename__ = "stocks"
 
-    id = db.Column(db.Integer, primary_key=True)
-    symbol = db.Column(db.String(16))
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(255), nullable=False)
+    overview = db.Column(db.String(1000), nullable=True)
+    ipo_date = db.Column(db.DateTime, nullable=False)
+    purchase_price = db.Column(db.Float, nullable=False)
+    industry_sector = db.Column(db.String(255), nullable=True)
+
+    def __init__(self, title, overview, ipo_date, purchase_price, industry_sector):
+        self.title = title
+        self.overview = overview
+        self.ipo_date = datetime.now()
+        self.purchase_price = purchase_price
+        self.industry_sector = industry_sector
 
     def __repr__(self):
-        return f"<Stock id={self.id} symbol={self.symbol} user_id={self.user_id}>"
+        return f"<Stock {self.title}>"
+
+
+
 
 class User(db.Model):
     __tablename__ = "users"
@@ -80,13 +105,20 @@ class Rating(db.Model):
 
     id = db.Column(db.Integer, primary_key = True, autoincrement = True)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable = False)
-    industry_id = db.Column(db.Integer, db.ForeignKey("industries.id"), nullable = False)
-    account_id = db.Column(db.Integer, db.ForeignKey("accounts.id"), nullable = False)
+    stock_id = db.Column(db.Integer, db.ForeignKey("stocks.id"), nullable = False)
+    # industry_id = db.Column(db.Integer, db.ForeignKey("industries.id"), nullable = False)
+    # account_id = db.Column(db.Integer, db.ForeignKey("accounts.id"), nullable = False)
+    score = db.Column(db.Float)
 
-    def __init__(self, user_id, industry_id, account_id):
+    user = db.relationship("User", backref="ratings")
+    stock = db.relationship("Stock", backref="ratings")
+
+    def __init__(self, user_id, stock_id, score):
         self.user_id = user_id
-        self.industry_id = industry_id
-        self.account_id = account_id
+        self.stock_id = stock_id
+        # self.industry_id = industry_id
+        # self.account_id = account_id
+        self.score = score 
 
 class Future(db.Model):
 
