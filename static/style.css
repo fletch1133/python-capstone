@@ -1,0 +1,81 @@
+/* style for page container */
+.page-container {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 2rem;
+  }
+  
+  /* style for headings */
+  .page-container h1, .page-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* style for navigation links */
+  .page-container ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .page-container ul li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  
+  .page-container ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #e6e6e6;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .page-container ul li a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* style for form elements */
+  .page-container form p {
+    margin-bottom: 1rem;
+  }
+  
+  .page-container form input[type="text"], 
+  .page-container form input[type="password"], 
+  .page-container form input[type="string"] {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    margin-left: 0.5rem;
+  }
+  
+  .page-container form input[type="submit"] {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .page-container form input[type="submit"]:hover {
+    background-color: #e6e6e6;
+    color: #333;
+  }
+  
+  /* style for average rating */
+  .page-container #avg-rating {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  #dingleberry {
+    margin-bottom: 20px;
+  }
+ 
+  
