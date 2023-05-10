@@ -75,7 +75,10 @@ def update_rating(rating_id, new_score):
     else:
         return False
 
+def get_ratings_by_stock_id(stock_id):
+    ratings = Rating.query.filter_by(stock_id=stock_id)
 
+    return ratings
 
 
 
@@ -137,7 +140,7 @@ def pick_stock():
 
     return stock
 
-def get_stocks():
+def get_all_stocks():
     
     return db.session.execute(db.select(Stock).order_by(Stock.id))
 

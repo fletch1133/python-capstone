@@ -16,19 +16,21 @@ def homepage():
 
     return render_template("homepage.html")
 
-#@app.route("/stocks")
-#def all_stocks():
-   # """View all the stocks."""
-
-    #stocks = crud.get_stocks()
-
 @app.route("/stocks")
-def all_stocks():
-    with open('/Users/anthonyfletcher/Ex from specs/Capstone/data/stocks.json') as f:
-        stocks = json.load(f)
-    return render_template("all_stocks.html", stocks=stocks)
+def get_stocks():
+     with open('/Users/anthonyfletcher/Ex from specs/Capstone/data/stocks.json') as f:
+         stocks = json.load(f)
+         print(stocks)
+     return render_template("all_stocks.html", stocks=stocks, stock=None)
 
 
+# @app.route("/stocks")
+# def all_stocks():
+#     """Show a list of all stocks."""
+
+#     stocks = crud.get_all_stocks()
+
+#     return render_template("all_stocks.html", stocks=stocks)
 
 @app.route("/users")
 def all_users():
@@ -100,7 +102,7 @@ def create_rating():
         user = crud.get_user_by_id(1)
     crud.create_rating(stock_id=request.form.get("stock-selector"), user_id=user.id, score=request.form.get("values-selector"))
     #flash(f"You rated {request.form.get("stock-selector")} as {rating} stock!")
-    return redirect(url_for("all_stocks"))
+    return redirect(url_for("get_stocks"))
 
 
 @app.route("/update_rating", methods=["POST"])
@@ -112,6 +114,18 @@ def update_rating():
 
     flash(f"You have updated the rating")
     return render_template("all_stocks.html", rating_id=rating_id, update_score=update_score)
+
+@app.route("/stocks/<int:stock_id>/avg_rating")
+def get_avg_rating(stock_id):
+    """Get the average rating for a stock."""
+    ratings = crud.get_ratings_by_stock_id(stock_id)
+    if not ratings:
+        return "No ratings found for this stock."
+
+    scores = [r.score for r in ratings]
+    avg_score = sum(scores) / max([len(scores), 1.0])
+    return f"The average rating for this stock is {avg_score:.2f}."
+
 
 
 @app.route("/")

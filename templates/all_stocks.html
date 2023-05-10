@@ -16,12 +16,36 @@
                 Rating it <input name="values-selector" value="0.0" type="string">
                 <input type="submit">
             </p>
+        <h2>Average rating:</h2>
+            <p id="avg-rating">Loading...</p>
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $('#stock-selector').on('change', function(){
+                        var stockId = $( "#stock-selector" ).val();
+                        // var stockId = "{{ stock.id }}";
+                        console.log(stockId);
+                        $.get(`/stocks/${stockId}/avg_rating`, function(response) {
+                            $('#avg-rating').text(response);
+                        });
+                    })
+                    $(function() {
+                        var stockId = $( "#stock-selector" ).val();
+                        // var stockId = "{{ stock.id }}";
+                        console.log(stockId);
+                        $.get(`/stocks/${stockId}/avg_rating`, function(response) {
+                            $('#avg-rating').text(response);
+                        });
+                    });
+            </script>
+
         </form>
+    <a href="{{ url_for('get_stocks') }}">All Stocks</a>
     {% block title %}All Stocks{% endblock %} 
 
     {% block body %} 
-    <h1>All Stocks</h1>
     <ul>
+        <h1>The stocks below</h1>
         {% for stock in stocks %} 
         <li>
             <a href="/stocks/{{stock.title}}">
